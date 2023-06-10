@@ -1,38 +1,261 @@
-.App {
+.Header{
+
+  width:350px;
   text-align: center;
+  padding-top:30px;
+  background-color:darkgray;
+  height:100vh
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header img{
+  height:200px;
+  width:200px;
+  border-radius: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header #git{
+  height:30px;
+  width:30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header #linkedin{
+  height:30px;
+  width:30px;
+  margin-right:20px;
+}
+
+.splitScreen {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+}
+
+.leftpane {
+  grid-column: 1;
+    grid-row: 1;
+}
+
+.rightpane {
+  grid-column: 2;
+    grid-row: 1;
+    height:100vh;
+    overflow-y: scroll;
+}
+
+.Intro{
+  height:500px;
+  background-image: url(./images/intro.jpeg);
+  background-size: 100% 100%;
+  
+}
+
+.Intro h1{
+  text-align: left;
+  padding-top: 150px;
+  padding-left: 200px;
+  font-size:40pt;
+}
+
+.Card{
+  padding: 10px;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  background-color:"white";
+  box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  text-align: center;
+  border-bottom: 2px solid #072034;
+}
+
+.CardImage{
+  height: 100px;
+  width:100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.CardList{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.timeline-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  margin: 40px 0;
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline-container::after {
+  background-color: black;
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.timeline-item {
+ 
+  justify-content: flex-start;
+  padding-left: 30px;
+  padding-right: 0;
+  padding-bottom: 30px;
+}
+
+.timeline-item-content {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15px;
+  position: relative;
+  width: 900px;
+  max-width: 90%;
+  text-align: right;
+}
+
+.timeline-item-content::after {
+  content: ' ';
+  background-color: #fff;
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: -7.5px;
+  top: calc(50% - 7.5px);
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+}
+
+.timeline-item .timeline-item-content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.timeline-item .timeline-item-content::after {
+  right: auto;
+  left: -7.5px;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item-content .tag {
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  top: 5px;
+  left: 5px;
+  letter-spacing: 1px;
+  padding: 5px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.timeline-item .timeline-item-content .tag {
+  left: auto;
+  right: 5px;
+}
+
+.timeline-item-content time {
+  color: #777;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.timeline-item-content p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 15px 0;
+  max-width: 700px;
+}
+
+.timeline-item-content a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.timeline-item-content a::after {
+  content: ' ►';
+  font-size: 12px;
+}
+
+.timeline-item-content .circle {
+  background-color: #fff;
+  border: 3px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -40px;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+}
+
+.timeline-item .timeline-item-content .circle {
+  right: auto;
+  left: -40px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .timeline-item-content {
+      max-width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 767px) {
+  .timeline-item-content,
+  .timeline-item .timeline-item-content {
+      padding: 15px 10px;
+      text-align: center;
+      align-items: center;
   }
+
+  .timeline-item-content .tag {
+      width: calc(100% - 10px);
+      text-align: center;
+  }
+
+  .timeline-item-content time {
+      margin-top: 20px;
+  }
+
+  .timeline-item-content a {
+      text-decoration: underline;
+  }
+
+  .timeline-item-content a::after {
+      display: none;
+  }
+}
+
+.contactform{
+ 
+  text-align: center;
+}
+.contactform table{
+  padding-left: 500px;
+}
+.contactform input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  margin: 0.9vw 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.contactform textarea {
+  height: 15vh;
+}
+
+.table1{
+text-align: left;
 }

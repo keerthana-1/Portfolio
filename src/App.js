@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import Introduction from './Introduction';
+import About from './About';
+import Skills from './Skills';
+import Timeline from './Timeline';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="splitScreen">
+      <div className="leftpane"> <Header />
+      </div>
+      <div className="rightpane">
+        <Introduction />
+        <About />
+        <br></br>
+        <Skills/>
+        <br></br>
+        <Timeline />
+      </div>
+
     </div>
+   
+    
+    </div>
+
   );
 }
 
