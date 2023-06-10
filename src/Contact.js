@@ -6,7 +6,7 @@ function Contact(){
         
         <div className="contactform">
         <h1>Contact</h1>
-             <form name="contact" method="post" onSubmit="submit" data-netlify="true">
+             <form name="contact" netlify method="post" onSubmit="submit" data-netlify="true">
 
                 <input type="hidden" name="contact" value="contact"></input>
 
