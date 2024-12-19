@@ -27,7 +27,7 @@ export default function Volunteering(){
             color: '#78350F'
         }}>
         Volunteering
-        <Icon name="hand rock" size="large" style={{ backgroundColor: 'transparent' }}></Icon>
+        <Icon name="hand paper" size="large" style={{ backgroundColor: 'transparent' }}></Icon>
         </Button>}
       >
         <ModalHeader  className='text-amber-900 text-center'>Volunteering</ModalHeader>
