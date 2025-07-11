@@ -29,20 +29,11 @@ export const TimelineData=[
             color: '#78350F'
         }
     },
+
     {
-        text: 'Worked as Intern at AndhraPradesh Technology Services',
-        tech: 'Developed a web application to automate report generation for the cybersecurity team using C#, HTML, CSS, JavaScript, and SQL Server.',
-        date: 'April 2021 - May 2021',
-        category: {
-            tag: 'Web Developer Intern',
-            emoji: '👩‍💻',
-            color: '#78350F'
-        }
-    },
-    {
-        text: 'Worked as Intern at Deloitte',
-        tech: 'Developed cutting-edge applications across various domains, including Machine Learning, Azure CognitiveServices, and Web Application Development. Projects Include: Cricket Commentary Classification, OCR-based Data Extraction, Employee Management System',
-        date: 'June 2020 - July 2020',
+        text: 'Worked as Intern at KPIT',
+        tech: 'Developed an application for fleet management using React as Frontend and SQL Server as database.',
+        date: 'January 2020 - June 2021',
         category: {
             tag: 'Software Developer Intern',
             emoji: '👩‍💻',
