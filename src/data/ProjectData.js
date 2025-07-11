@@ -32,7 +32,7 @@ const ProjectData=[
         title:"Cake Ordering Platform - MERN",
         image:"cake.png",
         description:"This application allows users to order cakes online and get them delivered to their place.",
-        source:"https://github.com/keerthana-1?tab=repositories",
+        source:"https://github.com/keerthana-1/cakeshop-mern",
         skills:["React","NodeJs","ExpressJs","MongoDb","HTML", "CSS", "Typescript"]
     },
     {
